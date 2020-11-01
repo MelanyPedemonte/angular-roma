@@ -3,10 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ServiciosListComponent } from './servicios-list/servicios-list.component';
+import { RomaNosotrasComponent } from './roma-nosotras/roma-nosotras.component';
+import { RomaServiciosComponent } from './roma-servicios/roma-servicios.component';
+import { CarritoComponent } from './carrito/carrito.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ServiciosListComponent,
+    RomaNosotrasComponent,
+    RomaServiciosComponent,
+    CarritoComponent
   ],
   imports: [
     BrowserModule,

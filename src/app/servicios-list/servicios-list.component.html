@@ -1,0 +1,21 @@
+<div class="precios">
+    <h2>Precios y Servicios</h2>
+    <div class="tablaServicios">
+        <table class=table>
+            <thead>
+                <th>Servicio</th>
+                <th>Material</th>
+                <th>Cantidad de NailArts</th>
+                <th>Precio</th>
+                <th>Comprar</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let servicio of servicios">
+                    <td>{{servicio.nombre}}</td>
+                    <td>{{servicio.material}}</td>
+                    <td>{{servicio.nailart}}</td>
+                    <td>{{servicio.precio | currency}}</td>
+                    <td><span class="badge badge-pill badge-dark" *ngIf="servicio.stock==0">SIN STOCK</span></td>
+                    <td><button type="button" class="btn btn-dark btn-xs" (click)= "downCantidad(servicio)"> - </button> {{servicio.cantidad}} <button type="button" class="btn btn-dark btn-xs" (click)= "upCantidad(servicio)">+</button></td></tr>
+
+            </tbody>
