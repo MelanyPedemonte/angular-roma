@@ -7,6 +7,7 @@ import { ServiciosListComponent } from './servicios-list/servicios-list.componen
 import { RomaNosotrasComponent } from './roma-nosotras/roma-nosotras.component';
 import { RomaServiciosComponent } from './roma-servicios/roma-servicios.component';
 import { CarritoComponent } from './carrito/carrito.component';
+import { InputNumeroComponent } from './input-numero/input-numero.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CarritoComponent } from './carrito/carrito.component';
     ServiciosListComponent,
     RomaNosotrasComponent,
     RomaServiciosComponent,
-    CarritoComponent
+    CarritoComponent,
+    InputNumeroComponent
   ],
   imports: [
     BrowserModule,

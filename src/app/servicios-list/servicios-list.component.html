@@ -7,6 +7,8 @@
                 <th>Material</th>
                 <th>Cantidad de NailArts</th>
                 <th>Precio</th>
+                <th>Stock</th>
+                <th>Cantidad</th>
                 <th>Comprar</th>
             </thead>
             <tbody>
@@ -16,6 +18,7 @@
                     <td>{{servicio.nailart}}</td>
                     <td>{{servicio.precio | currency}}</td>
                     <td><span class="badge badge-pill badge-dark" *ngIf="servicio.stock==0">SIN STOCK</span></td>
-                    <td><button type="button" class="btn btn-dark btn-xs" (click)= "downCantidad(servicio)"> - </button> {{servicio.cantidad}} <button type="button" class="btn btn-dark btn-xs" (click)= "upCantidad(servicio)">+</button></td></tr>
-
+                    <td><app-input-numero [(cantidad)]= "servicio.cantidad" [max]= "servicio.stock"></app-input-numero></td>
+                    <td><button type="button" class="btn btn-dark btn-xs" (click)= "addCarrito(servicio)" >Comprar</button></td>
+                </tr>
             </tbody>
