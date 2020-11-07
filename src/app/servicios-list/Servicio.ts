@@ -4,6 +4,7 @@ export interface Servicio {
     nailart: number;
     precio: number;
     stock: number;
+    image: string;
     cantidad: number;
   } 
   

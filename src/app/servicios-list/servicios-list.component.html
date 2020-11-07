@@ -1,24 +1,26 @@
 <div class="precios">
-    <h2>Precios y Servicios</h2>
+    <h2>Servicios</h2>
     <div class="tablaServicios">
         <table class=table>
             <thead>
-                <th>Servicio</th>
-                <th>Material</th>
-                <th>Cantidad de NailArts</th>
-                <th>Precio</th>
-                <th>Stock</th>
-                <th>Cantidad</th>
-                <th>Comprar</th>
+
             </thead>
             <tbody>
                 <tr *ngFor="let servicio of servicios">
-                    <td>{{servicio.nombre}}</td>
-                    <td>{{servicio.material}}</td>
-                    <td>{{servicio.nailart}}</td>
-                    <td>{{servicio.precio | currency}}</td>
-                    <td><span class="badge badge-pill badge-dark" *ngIf="servicio.stock==0">SIN STOCK</span></td>
-                    <td><app-input-numero [(cantidad)]= "servicio.cantidad" [max]= "servicio.stock"></app-input-numero></td>
-                    <td><button type="button" class="btn btn-dark btn-xs" (click)= "addCarrito(servicio)" >Comprar</button></td>
+                    <div class="card">
+                        <img class="card-img-top" [src]="servicio.image" [alt]= "servicio.nombre">
+                        <div class="card-body">
+                            <h5 class="card-title">{{servicio.nombre}}</h5>
+                            <p class="card-text">{{servicio.precio | currency}}</p>
+                            <p class="card-text"><small class="text-muted">{{servicio.material}}</small></p>
+                            <p class="card-text"><small class="text-muted">Cantidad de uñas con NailArt: {{servicio.nailart}}</small></p>
+                            <p class="card-text"><span class="badge badge-pill badge-dark" *ngIf="servicio.stock==0">SIN STOCK</span></p>
+                            <p class="card-text"><app-input-numero [(cantidad)]= "servicio.cantidad" [max]= "servicio.stock"></app-input-numero></p>
+                            <p class="card-text">
+                                <button type="button" class="btn btn-sm btn-block btn-light" *ngIf="servicio.stock == 0" disabled>Agregar al carrito</button>
+                                <button type="button" class="btn btn-sm btn-block btn-dark" *ngIf="servicio.stock > 0" (click)= "addCarrito(servicio)" >Agregar al carrito</button>
+                            </p>
+                        </div>
+                    </div>
                 </tr>
             </tbody>
