@@ -1,13 +1,8 @@
-<div class="precios">
-    <h2>Servicios</h2>
-    <div class="tablaServicios">
-        <table class=table>
-            <thead>
 
-            </thead>
-            <tbody>
-                <tr *ngFor="let servicio of servicios">
-                    <div class="card">
+<div class="container">    
+    <div class="row row-cols-1 row-cols-md-2">
+                <div class="col mb-4" *ngFor="let servicio of servicios">
+                    <div class="card" style="width: 18rem;">
                         <img class="card-img-top" [src]="servicio.image" [alt]= "servicio.nombre">
                         <div class="card-body">
                             <h5 class="card-title">{{servicio.nombre}}</h5>
@@ -22,5 +17,6 @@
                             </p>
                         </div>
                     </div>
-                </tr>
-            </tbody>
+                </div>
+        </div>
+</div>
