@@ -15,7 +15,7 @@ export class ServiciosListComponent implements OnInit {
     nailart: 1,
     precio: 500,
     stock: 5,
-    image: 'assets/img/lila.jfif',
+    image: './assets/img/lila.jfif',
     cantidad:0,
   },
   {
@@ -24,7 +24,7 @@ export class ServiciosListComponent implements OnInit {
     nailart: 5,
     precio: 750,
     stock: 5,
-    image: 'assets/img/byw.jfif',
+    image: './assets/img/byw.jfif',
     cantidad:0,
   },
   {
@@ -33,7 +33,7 @@ export class ServiciosListComponent implements OnInit {
     nailart: 2,
     precio: 600,
     stock: 0,
-    image: 'assets/img/celeste.jfif',
+    image: './assets/img/celeste.jfif',
     cantidad:0,
   }
 ];
