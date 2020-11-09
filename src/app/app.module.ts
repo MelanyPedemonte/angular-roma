@@ -8,6 +8,7 @@ import { RomaNosotrasComponent } from './roma-nosotras/roma-nosotras.component';
 import { RomaServiciosComponent } from './roma-servicios/roma-servicios.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { InputNumeroComponent } from './input-numero/input-numero.component';
+import { RomaHomeComponent } from './roma-home/roma-home.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { InputNumeroComponent } from './input-numero/input-numero.component';
     ServiciosListComponent,
     RomaNosotrasComponent,
     RomaServiciosComponent,
+    RomaHomeComponent,
     CarritoComponent,
     InputNumeroComponent
   ],
